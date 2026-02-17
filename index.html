@@ -4,13 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BubbleCap</title>
+        <link rel="stylesheet" href="https://unpkg.com/xp.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
         <div class="navbar">
             <div class="navbar-left">
-                <img class="navbar_logo" src="img/bubblecap.png" alt="logo.png" />
+                <a href="index.html">
+                    <img class="navbar_logo" src="img/bubblecap.png" alt="logo.png" />
+                </a>
             </div>
             <div class="navbar-right">
                 <div>
@@ -19,22 +22,75 @@
                     </a>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">More</button>
+                    <p class="dropbtn">More</p>
                     <div class="dropdown-content">
-                        <a href="#">Login</a>
-                        <a href="#">Register</a>
-                        <a href="#">Contact</a>
+                        <a href="#">*Login</a>
+                        <a href="#">*Register</a>
+                        <a href="#">*Contact</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="hero">
-            <div class="hero-left"></div>
+            <div class="hero-left">
+                <div class="window item-1">
+                    <div class="title-bar">
+                        <div class="title-bar-text">item_1.png</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <img class="cap_1" src="img/Cap_1.png" alt="Cap_1" />
+                    </div>
+                </div>
+                <div class="window item-2">
+                    <div class="title-bar">
+                        <div class="title-bar-text">item_2.png</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <img class="cap_1" src="img/Cap_1.png" alt="Cap_1" />
+                    </div>
+                </div>
+                <div class="window item-3">
+                    <div class="title-bar">
+                        <div class="title-bar-text">item_3.png</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <img class="cap_1" src="img/Cap_1.png" alt="Cap_1" />
+                    </div>
+                </div>
+            </div>
             <div class="hero-right">
-                <p>
-                    Simple selection,<br />
-                    strong choices
-                </p>
+                <div class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">title.txt</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <p>
+                            Simple selection,<br />
+                            strong choices
+                        </p>
+                        <div><button href="#">Explore</button></div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

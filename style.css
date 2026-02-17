@@ -1,6 +1,7 @@
 html,
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -12,10 +13,11 @@ body {
 
 .navbar {
     height: 8vh;
-    width: 100vw;
+    width: 100%;
     background-color: #418b35;
     display: flex;
     justify-content: space-between;
+    border: 1px solid #204528;
 }
 
 .navbar_logo {
@@ -34,11 +36,11 @@ body {
 }
 
 .navbar-left {
-    width: 85vw;
+    width: 85%;
 }
 
 .navbar-right {
-    width: 15vw;
+    width: 15%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -48,9 +50,9 @@ body {
     padding: 16px;
     border: none;
     cursor: pointer;
-    color: #d35c21;
+    color: #b6140f;
     font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.3px white;
+    -webkit-text-stroke: 0.7px #204528;
     font-size: 30px;
 }
 
@@ -64,6 +66,7 @@ body {
     background-color: #418b35;
     min-width: 150px;
     right: 0;
+    top: 11vh;
 }
 
 .dropdown-content a {
@@ -71,15 +74,15 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: #d35c21;
+    color: #b6140f;
     font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.3px white;
-    font-size: 20px;
+    -webkit-text-stroke: 0.7px #204528;
+    font-size: 25px;
 }
 
 .dropdown-content a:hover {
-    background-color: #d35c21;
-    color: #d35c21;
+    background-color: #b6140f;
+    color: #b6140f;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,13 +92,55 @@ body {
 .hero {
     height: 92vh;
     width: 100vw;
+    display: flex;
 }
 
-.hero p {
+.hero-right p {
     margin: 0;
-    color: #d35c21;
+    color: #b6140f;
     font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px #334fed;
     font-size: 100px;
-    background-color: #418b35;
+    padding: 20px;
+}
+
+.hero-left,
+.hero-right {
+    width: 50vw;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.hero-left .window {
+    width: 25%;
+}
+
+.window-body .cap_1 {
+    width: 100%;
+}
+
+.hero-right {
+    display: flex;
+    align-items: center;
+}
+
+.item-1 {
+    width: 50%;
+    transform: rotate(-5deg);
+}
+
+.item-2 {
+    width: 50%;
+    transform: rotate(20deg);
+}
+
+.item-3 {
+    width: 50%;
+    transform: rotate(190deg);
 }
