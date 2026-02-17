@@ -2,6 +2,11 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: lightgrey;
+}
+
+p {
+    margin: 0;
 }
 
 @font-face {
@@ -17,7 +22,7 @@ body {
     background-color: #418b35;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #204528;
+    border: 1.5px solid #204528;
 }
 
 .navbar_logo {
@@ -98,10 +103,10 @@ body {
 .hero-right p {
     margin: 0;
     color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 1px #334fed;
-    font-size: 100px;
+    -webkit-text-stroke: 2px #204528;
+    font-size: 110px;
     padding: 20px;
+    text-align: center;
 }
 
 .hero-left,
@@ -114,33 +119,61 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 35px;
-}
-
-.hero-left .window {
-    width: 25%;
-}
-
-.window-body .cap_1 {
-    width: 100%;
+    gap: 15px;
 }
 
 .hero-right {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .item-1 {
-    width: 50%;
     transform: rotate(-5deg);
 }
 
 .item-2 {
-    width: 50%;
     transform: rotate(20deg);
 }
 
 .item-3 {
-    width: 50%;
     transform: rotate(190deg);
+}
+
+.item-1,
+.item-2,
+.item-3 {
+    background-color: #418b35;
+    border: 1.5px solid #204528;
+}
+
+.cap_1 {
+    width: 240px;
+}
+
+.stock-button {
+    color: #b6140f;
+    border: 2px solid #204528;
+    background-color: #418b35;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.footer {
+    width: 100%;
+    background-color: #b6140f;
+}
+
+.hero-right-title {
+    font-family: "Space Patrol", sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
 }
