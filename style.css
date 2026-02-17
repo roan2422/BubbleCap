@@ -1,1 +1,101 @@
+html,
+body {
+    margin: 0;
+}
 
+@font-face {
+    font-family: "Space Patrol";
+    src: url("font/Spacepatrol-vK7y.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    height: 8vh;
+    width: 100vw;
+    background-color: #418b35;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_logo {
+    height: 7vh;
+}
+
+.cart_icon {
+    height: 5vh;
+    width: auto;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    width: 85vw;
+}
+
+.navbar-right {
+    width: 15vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dropbtn {
+    background-color: #418b35;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    color: #d35c21;
+    font-family: "Space Patrol", sans-serif;
+    -webkit-text-stroke: 0.3px white;
+    font-size: 30px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #418b35;
+    min-width: 150px;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #d35c21;
+    font-family: "Space Patrol", sans-serif;
+    -webkit-text-stroke: 0.3px white;
+    font-size: 20px;
+}
+
+.dropdown-content a:hover {
+    background-color: #d35c21;
+    color: #d35c21;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    height: 92vh;
+    width: 100vw;
+}
+
+.hero p {
+    margin: 0;
+    color: #d35c21;
+    font-family: "Space Patrol", sans-serif;
+    -webkit-text-stroke: 1px white;
+    font-size: 100px;
+    background-color: #418b35;
+}
