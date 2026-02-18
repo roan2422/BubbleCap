@@ -1,1 +1,13 @@
-
+{
+    "stock": [
+        { "id": 1, "name": "TGTTEL Cap", "quantity": 100, "price": 19.99 },
+        { "id": 2, "name": "Cookie Monster Cap", "quantity": 100, "price": 14.99 },
+        { "id": 3, "name": "Coca Cola Cap", "quantity": 100, "price": 14.99 },
+        { "id": 4, "name": "Mtn Dew Cap", "quantity": 100, "price": 14.99 },
+        { "id": 5, "name": "Propeller Cap", "quantity": 100, "price": 99.99 },
+        { "id": 6, "name": "Monster Cap", "quantity": 100, "price": 14.99 },
+        { "id": 7, "name": "Mountain Dew Drink", "quantity": 100, "price": 1.49 },
+        { "id": 8, "name": "Pepsi Drink", "quantity": 100, "price": 1.49 },
+        { "id": 9, "name": "7Up Drink", "quantity": 100, "price": 1.49 }
+    ]
+}
