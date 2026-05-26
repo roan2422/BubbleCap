@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BubbleCap</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
+        <script defer src="script.js" defer></script>
     </head>
     <body>
         <div class="navbar">
@@ -35,30 +35,30 @@
             </div>
         </div>
         <div class="stock-title">
-            <p>Register:</p>
+            <p>Add new item:</p>
         </div>
-        <form class="form">
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Name:</label>
-                <input id="dataInput" type="text" />
+        <div class="admin-items-div">
+            <div class="new-items-titel">
+                <p>New item:</p>
             </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Email:</label>
-                <input type="email" />
-            </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Phone number</label>
-                <input type="number" />
-            </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Password:</label>
-                <input type="password" />
-            </div>
-            <div>
-                <button class="register-button" onclick="saveData()">Register</button>
-            </div>
-        </form>
+            <div class="new-item-creator-div">
+                <form id="FormData" action="" enctype="multipart/form-data">
+                    <label for="name">Product Name:</label><br />
+                    <input required type="text" name="product-name" id="new-product-name" /><br />
 
+                    <label for="number">Price($):</label><br />
+                    <input required type="number" name="price" id="new-product-price" /><br />
+
+                    <label for="image">Image link:</label><br />
+                    <input required type="text" id="imageInput" name="product-image" /><br />
+                    <div class="add-product-button-div">
+                        <div>
+                            <button type="button" class="add-button" id="add-button">+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="footer" id="footer">
             <div>
                 <div class="top-footer-div">

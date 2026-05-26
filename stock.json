@@ -1,13 +1,67 @@
 {
     "stock": [
-        { "id": 1, "name": "TGTTEL Cap", "quantity": 100, "price": 19.99 },
-        { "id": 2, "name": "Cookie Monster Cap", "quantity": 100, "price": 14.99 },
-        { "id": 3, "name": "Coca Cola Cap", "quantity": 100, "price": 14.99 },
-        { "id": 4, "name": "Mtn Dew Cap", "quantity": 100, "price": 14.99 },
-        { "id": 5, "name": "Propeller Cap", "quantity": 100, "price": 99.99 },
-        { "id": 6, "name": "Monster Cap", "quantity": 100, "price": 14.99 },
-        { "id": 7, "name": "Mountain Dew Drink", "quantity": 100, "price": 1.49 },
-        { "id": 8, "name": "Pepsi Drink", "quantity": 100, "price": 1.49 },
-        { "id": 9, "name": "7Up Drink", "quantity": 100, "price": 1.49 }
+        {
+            "id": 1,
+            "name": "TGTTEL Cap",
+            "quantity": 100,
+            "price": 19.99,
+            "link": "https://salemtechsperts.com/cdn/shop/files/snapback-black-white-white-front-6772ed3fbb2cb.jpg?v=1735585091&width=1946"
+        },
+        {
+            "id": 2,
+            "name": "Cookie Monster Cap",
+            "quantity": 100,
+            "price": 14.99,
+            "link": "https://i5.walmartimages.com/seo/Sesame-Street-Cookie-Monster-Mens-Snapback-Hat-Adult-Precurve-Adjustable-Hat-Cap_e4ab43ea-71da-446b-964d-ee81205c6aa6.63bac7a2987c5337d2e0fbc5b4928aee.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+        },
+        {
+            "id": 3,
+            "name": "Coca Cola Cap",
+            "quantity": 100,
+            "price": 14.99,
+            "link": "https://m.media-amazon.com/images/I/81DqG3qMlAL._AC_UY1000_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Mtn Dew Cap",
+            "quantity": 100,
+            "price": 14.99,
+            "link": "https://mmv2api.s3.us-east-2.amazonaws.com/products/images/38275_angle.png"
+        },
+        {
+            "id": 5,
+            "name": "Propeller Cap",
+            "quantity": 100,
+            "price": 99.99,
+            "link": "https://png.pngtree.com/png-clipart/20231102/original/pngtree-hat-with-propeller---photo-png-image_13487700.png"
+        },
+        {
+            "id": 6,
+            "name": "Monster Cap",
+            "quantity": 100,
+            "price": 14.99,
+            "link": "https://images.customplanet.com/UserCreatedImages/MainDisplayImages/Front/9357eae7-ade4-4eef-969d-b2ed4b5b0869.png"
+        },
+        {
+            "id": 7,
+            "name": "Mountain Dew Drink",
+            "quantity": 100,
+            "price": 1.49,
+            "link": "https://png.pngtree.com/png-vector/20250309/ourmid/pngtree-a-chicken-in-raincoat-and-cool-image-mountain-dew-chilled-soda-png-image_15751962.png"
+        },
+        {
+            "id": 8,
+            "name": "Pepsi Drink",
+            "quantity": 100,
+            "price": 1.49,
+            "link": "https://png.pngtree.com/png-clipart/20250222/original/pngtree-classic-pepsi-can-refreshing-carbonated-soft-drink-png-image_20493806.png"
+        },
+        {
+            "id": 9,
+            "name": "7Up Drink",
+            "quantity": 100,
+            "price": 1.49,
+            "link": "https://nazarjanssupermarket.com/cdn/shop/files/7up-drink-can-250ml-nazar-jan-s-supermarket-1.png?v=1715266836"
+        }
     ]
 }

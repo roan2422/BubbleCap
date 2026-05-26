@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BubbleCap</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>Products</title>
         <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="navbar">
@@ -34,31 +34,20 @@
                 </div>
             </div>
         </div>
-        <div class="stock-title">
-            <p>Register:</p>
+        <div>
+            <p class="products-title">Products:</p>
         </div>
-        <form class="form">
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Name:</label>
-                <input id="dataInput" type="text" />
-            </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Email:</label>
-                <input type="email" />
-            </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Phone number</label>
-                <input type="number" />
-            </div>
-            <div class="form-div">
-                <label class="register-label" for="dataInput">Password:</label>
-                <input type="password" />
-            </div>
-            <div>
-                <button class="register-button" onclick="saveData()">Register</button>
-            </div>
-        </form>
-
+        <div class="product-elements">
+            <p class="product-element-name">id</p>
+            <p class="product-element-name">name</p>
+            <p class="product-element-name">price</p>
+            <p class="product-element-name">image link</p>
+            <p class="product-element-name"></p>
+            <p class="product-element-name"></p>
+        </div>
+        <div>
+            <div id="all-products-view"></div>
+        </div>
         <div class="footer" id="footer">
             <div>
                 <div class="top-footer-div">
