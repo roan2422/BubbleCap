@@ -1,28 +1,28 @@
 /* stock into localstorage */
-fetch("stock.json")
+fetch(`stock.json`)
     .then((res) => res.json())
     .then((data) => {
-        if (!localStorage.getItem("all-stock")) {
-            localStorage.setItem("all-stock", JSON.stringify(data.stock));
+        if (!localStorage.getItem(`all-stock`)) {
+            localStorage.setItem(`all-stock`, JSON.stringify(data.stock));
         }
     });
 
 function getStock() {
-    return JSON.parse(localStorage.getItem("all-stock")) || [];
+    return JSON.parse(localStorage.getItem(`all-stock`)) || [];
 }
 
 function saveStock(stock) {
-    localStorage.setItem("all-stock", JSON.stringify(stock));
+    localStorage.setItem(`all-stock`, JSON.stringify(stock));
 }
 
 /* cart sound */
-let addToCartAudio = new Audio("sounds/kashing.mp3");
+let addToCartAudio = new Audio(`sounds/kashing.mp3`);
 
 /* cart listeners */
 function addCartListeners() {
-    document.querySelectorAll(".cart-adding-button").forEach((button) => {
-        button.addEventListener("click", addToCart);
-        button.addEventListener("click", () => {
+    document.querySelectorAll(`.cart-adding-button`).forEach((button) => {
+        button.addEventListener(`click`, addToCart);
+        button.addEventListener(`click`, () => {
             addToCartAudio.currentTime = 0;
             addToCartAudio.play();
         });
@@ -32,23 +32,23 @@ function addCartListeners() {
 /* add to cart */
 function addToCart(event) {
     const id = parseInt(event.currentTarget.dataset.id);
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem(`cart`)) || [];
     const existing = cart.find((item) => item.id === id);
     if (existing) existing.quantity++;
     else cart.push({ id: id, quantity: 1 });
-    localStorage.setItem("cart", JSON.stringify(cart));
-    document.getElementById("reddot").style.display = "block";
+    localStorage.setItem(`cart`, JSON.stringify(cart));
+    document.getElementById(`reddot`).style.display = `block`;
     addToCartAudio.currentTime = 0;
     addToCartAudio.play();
 }
 
 /* display cart */
 function displayCart() {
-    const cartDiv = document.querySelector(".cart-items-div");
+    const cartDiv = document.querySelector(`.cart-items-div`);
     if (!cartDiv) return;
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem(`cart`)) || [];
     let stock = getStock();
-    cartDiv.innerHTML = "";
+    cartDiv.innerHTML = ``;
     let total = 0;
 
     cart.forEach((cartItem) => {
@@ -57,7 +57,7 @@ function displayCart() {
         const subtotal = product.price * cartItem.quantity;
         total += subtotal;
 
-        const div = document.createElement("div");
+        const div = document.createElement(`div`);
         div.innerHTML = `
             <p>${product.name}</p>
             <p>€${product.price}</p>
@@ -70,8 +70,8 @@ function displayCart() {
         cartDiv.appendChild(div);
     });
 
-    const totalDiv = document.createElement("h2");
-    totalDiv.innerText = "Total: €" + total.toFixed(2);
+    const totalDiv = document.createElement(`h2`);
+    totalDiv.innerText = `Total: €` + total.toFixed(2);
     cartDiv.appendChild(totalDiv);
 }
 
@@ -79,38 +79,38 @@ displayCart();
 
 /* change quantity */
 function changeQuantity(id, change) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem(`cart`)) || [];
     const item = cart.find((i) => i.id === id);
     if (!item) return;
     item.quantity += change;
     if (item.quantity <= 0) cart = cart.filter((i) => i.id !== id);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(`cart`, JSON.stringify(cart));
     displayCart();
 }
 
 /* remove cart item */
 function removeItem(id) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem(`cart`)) || [];
     cart = cart.filter((item) => item.id !== id);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(`cart`, JSON.stringify(cart));
     displayCart();
 }
 
 /* order button */
-const orderButton = document.querySelector(".order-button");
+const orderButton = document.querySelector(`.order-button`);
 
 if (orderButton) {
-    orderButton.addEventListener("click", () => {
-        let cart = JSON.parse(localStorage.getItem("cart"));
+    orderButton.addEventListener(`click`, () => {
+        let cart = JSON.parse(localStorage.getItem(`cart`));
         if (cart && cart.length > 0) {
-            let allOrders = JSON.parse(localStorage.getItem("Order")) || [];
+            let allOrders = JSON.parse(localStorage.getItem(`Order`)) || [];
             allOrders.push(cart);
-            localStorage.setItem("Order", JSON.stringify(allOrders));
-            localStorage.removeItem("cart");
-            window.location.href = "ordered.html";
+            localStorage.setItem(`Order`, JSON.stringify(allOrders));
+            localStorage.removeItem(`cart`);
+            window.location.href = `ordered.html`;
         } else {
-            orderButton.textContent = "Cart is empty!";
-            let cartEmptyAudio = new Audio("sounds/error.mp3");
+            orderButton.textContent = `Cart is empty!`;
+            let cartEmptyAudio = new Audio(`sounds/error.mp3`);
             cartEmptyAudio.play();
         }
     });
@@ -118,27 +118,27 @@ if (orderButton) {
 
 /* save login */
 function saveData() {
-    const data = document.getElementById("dataInput").value;
-    localStorage.setItem("userData", data);
+    const data = document.getElementById(`dataInput`).value;
+    localStorage.setItem(`userData`, data);
     displayData();
 }
 
 function displayData() {
-    const savedData = localStorage.getItem("userData");
-    if (savedData) document.getElementById("savedData").innerText = savedData;
+    const savedData = localStorage.getItem(`userData`);
+    if (savedData) document.getElementById(`savedData`).innerText = savedData;
 }
 
 displayData();
 
 /* load shop products */
 function loadShopProducts() {
-    const container = document.getElementById("productContainer");
+    const container = document.getElementById(`productContainer`);
     if (!container) return;
     let stock = getStock();
 
     stock.forEach((item) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+        const card = document.createElement(`div`);
+        card.classList.add(`card`);
         card.dataset.id = item.id;
 
         card.innerHTML = `
@@ -160,13 +160,13 @@ function loadShopProducts() {
 loadShopProducts();
 
 /* add new products */
-const addButton = document.getElementById("add-button");
+const addButton = document.getElementById(`add-button`);
 
 if (addButton) {
-    addButton.addEventListener("click", () => {
-        let name = document.querySelector("#new-product-name").value;
-        let price = document.querySelector("#new-product-price").value;
-        let image = document.querySelector("#imageInput").value;
+    addButton.addEventListener(`click`, () => {
+        let name = document.querySelector(`#new-product-name`).value;
+        let price = document.querySelector(`#new-product-price`).value;
+        let image = document.querySelector(`#imageInput`).value;
 
         let stock = getStock();
         let nextId = stock.length > 0 ? stock[stock.length - 1].id + 1 : 1;
@@ -179,20 +179,20 @@ if (addButton) {
         });
 
         saveStock(stock);
-        alert("Product added!");
+        alert(`Product added!`);
         location.reload();
     });
 }
 
 /* load admin product list */
 function loadAdminProducts() {
-    let allProductsView = document.getElementById("all-products-view");
+    let allProductsView = document.getElementById(`all-products-view`);
     if (!allProductsView) return;
     let stock = getStock();
 
     stock.forEach((product) => {
-        let productDiv = document.createElement("div");
-        productDiv.className = "product";
+        let productDiv = document.createElement(`div`);
+        productDiv.className = `product`;
 
         productDiv.innerHTML = `
             <p class="product-styling">${product.id}</p>
@@ -212,36 +212,36 @@ loadAdminProducts();
 
 /* edit buttons */
 function makingEditButtons() {
-    document.querySelectorAll(".product").forEach((product) => {
-        if (!product.querySelector(".edit-button-styling")) {
-            let div = document.createElement("div");
-            let btn = document.createElement("button");
-            btn.innerText = "Edit";
-            btn.classList.add("edit-button-styling");
-            div.classList.add("product-styling");
+    document.querySelectorAll(`.product`).forEach((product) => {
+        if (!product.querySelector(`.edit-button-styling`)) {
+            let div = document.createElement(`div`);
+            let btn = document.createElement(`button`);
+            btn.innerText = `Edit`;
+            btn.classList.add(`edit-button-styling`);
+            div.classList.add(`product-styling`);
             div.appendChild(btn);
             product.appendChild(div);
         }
     });
 }
 
-document.addEventListener("click", function (e) {
-    if (!e.target.classList.contains("edit-button-styling")) return;
-    const productDiv = e.target.closest(".product");
+document.addEventListener(`click`, function (e) {
+    if (!e.target.classList.contains(`edit-button-styling`)) return;
+    const productDiv = e.target.closest(`.product`);
     openEditForm(productDiv);
 });
 
 /* open edit form */
 function openEditForm(productDiv) {
-    if (productDiv.querySelector(".edit-form")) return;
+    if (productDiv.querySelector(`.edit-form`)) return;
 
     const id = productDiv.children[0].innerText;
     const name = productDiv.children[1].innerText;
     const price = productDiv.children[2].innerText;
     const link = productDiv.children[3].innerText;
 
-    const form = document.createElement("div");
-    form.classList.add("edit-form");
+    const form = document.createElement(`div`);
+    form.classList.add(`edit-form`);
 
     form.innerHTML = `
         <input type="text" id="edit-name" value="${name}">
@@ -254,33 +254,33 @@ function openEditForm(productDiv) {
 }
 
 /* save edit */
-document.addEventListener("click", function (e) {
-    if (!e.target.classList.contains("save-edit")) return;
+document.addEventListener(`click`, function (e) {
+    if (!e.target.classList.contains(`save-edit`)) return;
 
     const id = parseInt(e.target.dataset.id);
     let stock = getStock();
     let item = stock.find((p) => p.id === id);
 
     if (item) {
-        item.name = document.getElementById("edit-name").value;
-        item.price = parseFloat(document.getElementById("edit-price").value);
-        item.image = document.getElementById("edit-link").value;
+        item.name = document.getElementById(`edit-name`).value;
+        item.price = parseFloat(document.getElementById(`edit-price`).value);
+        item.image = document.getElementById(`edit-link`).value;
 
         saveStock(stock);
-        alert("Product updated!");
+        alert(`Product updated!`);
         location.reload();
     }
 });
 
 /* delete buttons */
 function makingDeleteButtons() {
-    document.querySelectorAll(".product").forEach((product) => {
-        if (!product.querySelector(".delete-button-styling")) {
-            let div = document.createElement("div");
-            let btn = document.createElement("button");
-            btn.innerText = "Delete";
-            btn.classList.add("delete-button-styling");
-            div.classList.add("product-styling");
+    document.querySelectorAll(`.product`).forEach((product) => {
+        if (!product.querySelector(`.delete-button-styling`)) {
+            let div = document.createElement(`div`);
+            let btn = document.createElement(`button`);
+            btn.innerText = `Delete`;
+            btn.classList.add(`delete-button-styling`);
+            div.classList.add(`product-styling`);
             div.appendChild(btn);
             product.appendChild(div);
         }
@@ -288,31 +288,31 @@ function makingDeleteButtons() {
 }
 
 /* delete product */
-document.addEventListener("click", (event) => {
-    const btn = event.target.closest(".delete-button-styling");
+document.addEventListener(`click`, (event) => {
+    const btn = event.target.closest(`.delete-button-styling`);
     if (!btn) return;
 
-    const productDiv = btn.closest(".product");
+    const productDiv = btn.closest(`.product`);
     const id = parseInt(productDiv.children[0].innerText);
 
     let stock = getStock();
     stock = stock.filter((item) => item.id !== id);
 
     saveStock(stock);
-    alert("Product deleted!");
+    alert(`Product deleted!`);
     location.reload();
 });
 
 /* reset stock */
-const resetBtn = document.getElementById("reset-button");
+const resetBtn = document.getElementById(`reset-button`);
 
 if (resetBtn) {
-    resetBtn.addEventListener("click", () => {
-        fetch("stock.json")
+    resetBtn.addEventListener(`click`, () => {
+        fetch(`stock.json`)
             .then((res) => res.json())
             .then((data) => {
                 saveStock(data.stock);
-                alert("Stock reset to original!");
+                alert(`Stock reset to original!`);
                 location.reload();
             });
     });
@@ -320,20 +320,20 @@ if (resetBtn) {
 
 /* order view */
 function loadOrderView() {
-    let ordersDiv = document.querySelector(".admin-orders-view");
+    let ordersDiv = document.querySelector(`.admin-orders-view`);
     if (!ordersDiv) return;
 
-    let allOrders = JSON.parse(localStorage.getItem("Order")) || [];
+    let allOrders = JSON.parse(localStorage.getItem(`Order`)) || [];
     let stock = getStock();
 
     allOrders.forEach((singleOrder, index) => {
-        let title = document.createElement("h3");
+        let title = document.createElement(`h3`);
         title.textContent = `0rder ${index + 1}`;
         ordersDiv.appendChild(title);
 
         singleOrder.forEach((orderItem) => {
             let product = stock.find((p) => p.id === orderItem.id);
-            let p = document.createElement("p");
+            let p = document.createElement(`p`);
 
             if (product) {
                 p.textContent = `${product.name} x${orderItem.quantity} — €${product.price}`;
@@ -344,7 +344,7 @@ function loadOrderView() {
             ordersDiv.appendChild(p);
         });
 
-        ordersDiv.appendChild(document.createElement("br"));
+        ordersDiv.appendChild(document.createElement(`br`));
     });
 }
 
