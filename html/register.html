@@ -4,24 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BubbleCap</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../javascript/register.js" defer></script>
     </head>
     <body>
         <div class="navbar">
             <div class="navbar-left">
                 <a href="index.html">
-                    <img class="navbar_logo" src="img/bubblecap.png" alt="logo.png" />
+                    <img class="navbar_logo" src="../img/bubblecap.png" alt="logo.png" />
                 </a>
             </div>
             <div class="navbar-right">
                 <div>
-                    <p>Hello,</p>
-                    <div id="savedData"></div>
+                    <div id="savedData">Hello, Bezoeker</div>
                 </div>
                 <div>
                     <a href="cart.html">
-                        <img class="cart_icon" src="img/cart.png" alt="cart_icon.png" />
+                        <img class="cart_icon" src="../img/cart.png" alt="cart_icon.png" />
                     </a>
                 </div>
                 <div class="dropdown">
@@ -33,30 +32,31 @@
                 </div>
             </div>
         </div>
-        <div class="hero">
-            <div class="hero-left">
-                <div class="item-1">
-                    <img class="cap_1" src="img/tgttel.png" alt="Cap_1" />
-                </div>
-                <div class="item-2">
-                    <img class="cap_1" src="img/mtndewcan.png" alt="Cap_1" />
-                </div>
-                <div class="item-3">
-                    <img class="cap_1" src="img/cookiemonster.png" alt="Cap_1" />
-                </div>
-            </div>
-            <div class="hero-right">
-                <div>
-                    <p class="hero-right-title">
-                        Simple selection,<br />
-                        strong choices
-                    </p>
-                </div>
-                <div>
-                    <a class="stock-button" href="stock.html">OUR STOCK!</a>
-                </div>
-            </div>
+        <div class="stock-title">
+            <p>Register:</p>
         </div>
+        <form class="form">
+            <div class="form-div">
+                <label class="register-label" for="dataInput">Name:</label>
+                <input id="dataInputName" type="text" />
+            </div>
+            <div class="form-div">
+                <label class="register-label" for="dataInput">Email:</label>
+                <input id="dataInputMail" type="email" />
+            </div>
+            <div class="form-div">
+                <label class="register-label" for="dataInput">Phone number</label>
+                <input id="dataInputPhone" type="number" />
+            </div>
+            <div class="form-div">
+                <label class="register-label" for="dataInput">Password:</label>
+                <input id="dataInputPassword" type="password" />
+            </div>
+            <div>
+                <button class="register-button" type="button">Register</button>
+            </div>
+        </form>
+
         <div class="footer" id="footer">
             <div>
                 <div class="top-footer-div">

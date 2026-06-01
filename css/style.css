@@ -17,7 +17,7 @@ p {
 
 @font-face {
     font-family: "Space Patrol";
-    src: url("font/Spacepatrol-vK7y.ttf") format("truetype");
+    src: url("/font/Spacepatrol-vK7y.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
