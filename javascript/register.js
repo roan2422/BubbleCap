@@ -17,11 +17,3 @@ function saveData() {
 }
 
 /* een form met alleen een naam zou niet echt mooi eruit zien */
-
-/* display name */
-function displayData() {
-    const savedData = localStorage.getItem(`userData`);
-    if (savedData) document.getElementById(`savedData`).innerText = `Hello, ${savedData}`;
-}
-
-displayData();

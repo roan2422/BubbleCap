@@ -15,20 +15,13 @@ p {
     margin: 0;
 }
 
-@font-face {
-    font-family: "Space Patrol";
-    src: url("/font/Spacepatrol-vK7y.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 .navbar {
     height: 8vh;
     width: 100%;
-    background-color: #418b35;
+    background-color: #6592c2;
     display: flex;
     justify-content: space-between;
-    border: 1.5px solid #204528;
+    border: 1.5px solid #000;
 }
 
 .navbar_logo {
@@ -71,12 +64,9 @@ p {
 }
 
 .dropbtn {
-    background-color: #418b35;
+    background-color: #6592c2;
     border: none;
     cursor: pointer;
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 30px;
     height: 100%;
     display: flex;
@@ -92,7 +82,7 @@ p {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #418b35;
+    background-color: #6592c2;
     min-width: 150px;
     right: 0;
 }
@@ -101,15 +91,13 @@ p {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
+    color: #000;
     font-size: 25px;
 }
 
 .dropdown-content a:hover {
-    background-color: #b6140f;
-    color: #b6140f;
+    background-color: #000;
+    color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -124,8 +112,7 @@ p {
 
 .hero-right p {
     margin: 0;
-    color: #b6140f;
-    -webkit-text-stroke: 2px #204528;
+    color: #6592c2;
     font-size: 110px;
     padding: 20px;
     text-align: center;
@@ -163,8 +150,8 @@ p {
 .item-1,
 .item-2,
 .item-3 {
-    background-color: #418b35;
-    border: 1.5px solid #204528;
+    background-color: #6592c2;
+    border: 1.5px solid #000;
 }
 
 .cap_1 {
@@ -181,25 +168,18 @@ p {
 }
 
 .stock-button {
-    color: #b6140f;
-    border: 2px solid #204528;
-    background-color: #418b35;
+    border: 2px solid #000;
+    color: #000;
+    background-color: #6592c2;
     padding: 20px;
     font-size: 30px;
     text-decoration: none;
-}
-
-.hero-right-title {
-    font-family: "Space Patrol", sans-serif;
 }
 
 .stock-title {
     display: flex;
     justify-content: center;
     padding: 20px;
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 100px;
 }
 
@@ -212,8 +192,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #418b35;
-    border: 2px solid #204528;
+    background-color: #6592c2;
+    border: 2px solid #000;
     width: 25vw;
     margin-bottom: 10vh;
 }
@@ -229,15 +209,10 @@ p {
 }
 
 .price {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 40px;
 }
 
 .item-name {
-    color: #b6140f;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 40px;
     text-align: center;
 }
@@ -252,9 +227,6 @@ p {
 }
 
 .register-label {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 50px;
 }
 
@@ -265,9 +237,8 @@ p {
 }
 
 .register-button {
-    color: #b6140f;
-    border: 2px solid #204528;
-    background-color: #418b35;
+    border: 2px solid #000;
+    background-color: #6592c2;
     padding: 10px 20px;
     font-size: 30px;
 }
@@ -277,9 +248,6 @@ p {
 }
 
 .admin-items-titel {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
     font-size: 70px;
     margin: 20px;
     text-align: center;
@@ -287,13 +255,13 @@ p {
 
 .admin-items-div {
     margin: 20px;
-    border: 2px solid #204528;
-    background-color: #418b35;
+    border: 2px solid #000;
+    background-color: #6592c2;
 }
 
 .admin-item {
-    border: 2px solid #204528;
-    background-color: #418b35;
+    border: 2px solid #000;
+    background-color: #6592c2;
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -317,19 +285,15 @@ p {
 #reset-button,
 .add-button,
 .orders-view-button {
-    background-color: #418b35;
-    border: 2px solid #204528;
+    background-color: #6592c2;
+    border: 2px solid #000;
     padding: 5px 15px;
     font-size: 30px;
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 0.7px #204528;
 }
 
 .edit-button,
 .remove-button {
-    background-color: #b6140f;
-    border: 2px solid #204528;
+    border: 2px solid #000;
     padding: 5px 10px;
     font-size: 20px;
 }
@@ -348,9 +312,6 @@ p {
 
 .new-items-titel {
     text-align: center;
-    color: #b6140f;
-    -webkit-text-stroke: 0.7px #204528;
-    font-family: "Space Patrol", sans-serif;
     font-size: 80px;
 }
 
@@ -363,9 +324,6 @@ p {
 }
 
 .new-item-creator-div label {
-    color: #b6140f;
-    -webkit-text-stroke: 0.7px #204528;
-    font-family: "Space Patrol", sans-serif;
     font-size: 40px;
 }
 
@@ -386,8 +344,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #418b35;
-    -webkit-text-stroke: 0.9px #204528;
+    color: #000;
     font-weight: 600;
     font-size: 25px;
 }
@@ -404,15 +361,14 @@ p {
 }
 
 .footer-title {
-    color: #418b35;
-    -webkit-text-stroke: 1px #204528;
-    font-family: "Space Patrol", sans-serif;
+    color: #000;
     font-size: 80px;
 }
 
 .footer {
+    border-top: 2px solid #000;
     width: 100%;
-    background-color: #b6140f;
+    background-color: #6592c2;
     height: 35vh;
 }
 
@@ -428,9 +384,8 @@ p {
 
 .order-button {
     padding: 10px;
-    color: #b6140f;
-    background-color: #418b35;
-    border: 2px solid #204528;
+    background-color: #6592c2;
+    border: 2px solid #000;
     font-size: 30px;
 }
 
@@ -455,26 +410,19 @@ p {
 }
 
 .ordered-page-middle-title {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
     font-size: 130px;
-    -webkit-text-stroke: 2.5px #204528;
 }
 
 .admin-orders-view {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
     padding: 0 20px;
 }
 
 .admin-orders-view p {
     font-size: 25px;
-    -webkit-text-stroke: 0.8px #204528;
 }
 
 .admin-orders-view h3 {
     font-size: 40px;
-    -webkit-text-stroke: 0.1px #204528;
 }
 
 #productContainer {
@@ -485,7 +433,7 @@ p {
 }
 
 #all-products-view {
-    background: #418b35;
+    background: #6592c2;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -496,9 +444,6 @@ p {
 }
 
 .products-title {
-    color: #b6140f;
-    font-family: "Space Patrol", sans-serif;
-    -webkit-text-stroke: 1px #204528;
     font-size: 50px;
     text-align: center;
     margin: 20px;
@@ -512,7 +457,7 @@ p {
 
 .product-elements {
     width: 100%;
-    background: #418b35;
+    background: #6592c2;
     display: flex;
 }
 
@@ -525,5 +470,6 @@ p {
 
 .edit-button-styling,
 .delete-button-styling {
-    background: #b6140f;
+    background: #000;
+    color: white;
 }
