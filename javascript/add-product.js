@@ -17,24 +17,26 @@ if (addButton) {
 
         if (name.trim() === "" || price.trim() === "" || image.trim() === "") {
             alert(`You cannot leave an input field empty`);
-        } else {
-            if (price < 0) {
-                alert(`Price cannot be negative!`);
-            } else {
-                let stock = getStock();
-                let nextId = stock.length > 0 ? stock[stock.length - 1].id + 1 : 1;
-
-                stock.push({
-                    id: nextId,
-                    name,
-                    price: parseFloat(price),
-                    image,
-                });
-
-                saveStock(stock);
-                alert(`Product added!`);
-                window.location.replace(`products.html`);
-            }
+            return;
         }
+
+        if (price < 0) {
+            alert(`Price cannot be negative!`);
+            return;
+        }
+
+        let stock = getStock();
+        let nextId = stock.length > 0 ? stock[stock.length - 1].id + 1 : 1;
+
+        stock.push({
+            id: nextId,
+            name,
+            price: parseFloat(price),
+            image,
+        });
+
+        saveStock(stock);
+        alert(`Product added!`);
+        window.location.replace(`products.html`);
     });
 }
