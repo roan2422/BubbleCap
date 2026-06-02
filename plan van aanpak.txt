@@ -1,0 +1,25 @@
+plan van aanpak:
+
+Wat voor webshop ga je maken?
+
+Ik ga een webshop maken waar je petten en drinken kan aanschaffen.
+Er zijn iets van 6 petten die beschikbaar zijn voor de verkoop.
+ook iets van 3 drankjes want de winkel heeft een kleine voorraad.
+
+Welke functionaliteit biedt jouw website?
+
+Op mijn website kan je inloggen zodat je naam in de taakbalk zou staan met een welkom message.
+Je kan natuurlijk je items in je cart doen en ervan weghalen en bestellen.
+Je kan met de admin panel de diverse items beheren zoals verwijderen of wijzigen maar ook toevoegen.
+Ook komt er te staan dat de verzendkosten gratis zijn maar er zijn wel servicekosten van 10% van het totale bedrag.
+Ook kan je de stock en items in de admin panel resetten naar de originele staat.
+
+Hoe gaat je website eruit zien?
+
+Mijn website gaan een mooie klassieke navbar hebben en ook een footer voor contact en socials etc.
+In de navbar staat een bericht naar degene die is ingelogd en een profielfoto en een cart icoontje.
+Ook misschien een dropdown voor in/uitloggen en contact en als je op contact klikt scrolled de pagina naar de footer.
+Verder gewoon een mooie layout en niets lelijk door elkaar heen of zoiets.
+Misschien als je op de website binnenkomt krijg je eerst een soort hero en als je naar beneden gaat of op een knop klikt gaat hij naar alle petten.
+
+(dit is goedgekeurd door Niels)

@@ -16,13 +16,13 @@ function saveStock(stock) {
 }
 
 /* cart sound */
-let addToCartAudio = new Audio(`/sounds/kashing.mp3`);
+let addToCartAudio = new Audio(`../sounds/kashing.mp3`);
 
 /* cart listeners */
 function addCartListeners() {
     document.querySelectorAll(`.cart-adding-button`).forEach((button) => {
-        button.addEventListener(`click`, addToCart);
         button.addEventListener(`click`, () => {
+            addToCart();
             addToCartAudio.currentTime = 0;
             addToCartAudio.play();
         });
@@ -59,7 +59,7 @@ function loadShopProducts() {
             <div class="cart-adding-div">
                 <p class="price">€${item.price}</p>
                 <button class="cart-adding-button" data-id="${item.id}">
-                    <img class="add-to-cart-img" src="/img/cart.png" alt="add-to-cart">
+                    <img class="add-to-cart-img" src="../img/cart.png" alt="add-to-cart">
                 </button>
             </div>
         `;

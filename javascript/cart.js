@@ -70,7 +70,7 @@ if (orderButton) {
             window.location.href = `ordered.html`;
         } else {
             orderButton.textContent = `Cart is empty!`;
-            let cartEmptyAudio = new Audio(`/sounds/error.mp3`);
+            let cartEmptyAudio = new Audio(`../sounds/error.mp3`);
             cartEmptyAudio.play();
         }
     });

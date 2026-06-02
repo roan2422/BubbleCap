@@ -15,7 +15,7 @@ if (addButton) {
         let price = document.querySelector(`#new-product-price`).value;
         let image = document.querySelector(`#imageInput`).value;
 
-        if (name.trim() === "" || price.trim() === "" || image.trim() === "") {
+        if (name.trim().length < 1 || price.trim().length < 1 || image.trim().length < 1) {
             alert(`You cannot leave an input field empty`);
             return;
         }
